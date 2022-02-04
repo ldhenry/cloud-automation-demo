@@ -1,0 +1,13 @@
+apiVersion: webhookconfig.keptn.sh/v1alpha1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.evaluation.finished
+      requests:
+        - curl --request POST --data
+          '{"event":"{{.type}}","stage":"{{.data.stage}}","result":"{{.data.result}}
+          ({{.data.evaluation.score}} / 100)"}'
+          https://62395ee4cb207b6b7d8533ed567b7fc1.m.pipedream.net
+      subscriptionID: 0059aa9c-4100-4f88-b186-2a1b3b90331e
