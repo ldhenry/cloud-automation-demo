@@ -23,7 +23,7 @@ spec:
       requests:
         - "curl --header 'Content-Type: application/json' --header
           'Authorization: {{.secret.ld-secret.CLIFF_LOCAL_AUTH_TOKEN}}'
-          --request PUT --data
+          --request PATCH --data
           '{\"environmentKey\":\"production\",\"instructions\":[{\"kind\":\"tur\
           nFlagOn\"}],\"comment\":\"{{.data.message}}\"}'
           https://ld-ctawiah-2.ngrok.io/api/v2/flags/default/ctawiah-test"
