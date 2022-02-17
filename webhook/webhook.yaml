@@ -11,3 +11,10 @@ spec:
           ({{.data.evaluation.score}} / 100)"}'
           https://ld-stg.launchdarkly.com/webhook/triggers/620d6e33704a8d0c4011327b/7b6fd087-bbd9-4885-af18-3ec103069f34
       subscriptionID: a331e349-fd35-41e3-9765-ed57af74bf50
+    - type: sh.keptn.event.evaluation.finished
+      requests:
+        - curl --request POST --data
+          '{"event":"{{.type}}","stage":"{{.data.stage}}","result":"{{.data.result}}
+          ({{.data.evaluation.score}} / 100)"}'
+          https://ld-ctawiah-2.ngrok.io/webhook/triggers/620d8f4c8b41fc6b62193ce4/5391ce00-ddb9-4db1-8322-7d4e12cd06b8
+      subscriptionID: 0059aa9c-4100-4f88-b186-2a1b3b90331e
