@@ -109,6 +109,14 @@ objectives:
   warning: []
   weight: 1
   key_sli: false
+- sli: problems
+  displayName: ""
+  pass:
+  - criteria:
+    - <=0
+  warning: []
+  weight: 1
+  key_sli: true
 total_score:
   pass: 90%
   warning: 70%
