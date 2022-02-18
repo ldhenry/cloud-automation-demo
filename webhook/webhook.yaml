@@ -19,19 +19,3 @@ spec:
           https://ld-ctawiah-2.ngrok.io/webhook/triggers/620d8f4c8b41fc6b62193c\
           e4/5391ce00-ddb9-4db1-8322-7d4e12cd06b8"
       subscriptionID: 0059aa9c-4100-4f88-b186-2a1b3b90331e
-    - type: sh.keptn.event.evaluation.finished
-      requests:
-        - "curl --header 'Content-Type: application/json' --header
-          'Authorization: {{.env.secret_cliffldlocal_authtoken}}' --request
-          PATCH --data
-          '{\"patch\":[{\"op\":\"replace\",\"path\":\"/environments/ctawiah-tes\
-          t/on\",\"value\":\"{{$score := (index
-          .data.evaluation.indicatorResults 1)}}{{ if ge $score 1}}true{{ else
-          }}false{{ end }}\"}],\"comment\":\"{{.data.message}}\"}'
-          https://ld-ctawiah-2.ngrok.io/api/v2/flags/default/ctawiah-test"
-      envFrom:
-        - name: secret_cliffldlocal_authtoken
-          secretRef:
-            name: cliff-ld-local
-            key: auth-token
-      subscriptionID: 6850dc25-91dd-4963-b87f-7e7364062698
