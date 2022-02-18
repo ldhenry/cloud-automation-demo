@@ -48,3 +48,13 @@ spec:
           https://ld-ctawiah-2.ngrok.io/webhook/triggers/620f3a5d8b41fc1fe075a1\
           fd/8f0ceed1-31bc-4483-87b2-f962f861c99e"
       subscriptionID: 19900df1-3d75-4e5b-a3db-24450e645691
+    - type: sh.keptn.event.execute-load-testing.triggered
+      requests:
+        - "curl --header 'Content-Type: application/json' --request POST --data
+          '{\"eventName\":\"{{.type}}\",\"stage\":\"{{.data.stage}}\",\"context\
+          Id\":\"{{.shkeptncontext}}\",\"url\":\"https://cyi56650.cloudautomati\
+          on.live.dynatrace.com/bridge/project/{{.data.project}}/sequence/{{.sh\
+          keptncontext}}/stage/{{.data.stage}}\",\"taskData\":\"{{.data}}\"}'
+          https://ld-ctawiah-2.ngrok.io/webhook/triggers/620f3a008b41fc1fe075a1\
+          f7/955f400b-863e-4420-b113-3be7ecf1723e"
+      subscriptionID: 0acb5b6d-8491-4570-9d4b-903c256b219a
