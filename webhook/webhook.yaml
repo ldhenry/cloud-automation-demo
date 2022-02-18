@@ -37,6 +37,7 @@ spec:
             key: auth-token
       subscriptionID: 6850dc25-91dd-4963-b87f-7e7364062698
     - type: sh.keptn.event.execute-load-testing.triggered
+      sendFinished: true
       requests:
         - curl --request POST --data
           '{"event":"{{.type}}","stage":"{{.data.stage}}","contextId":"{{.shkeptncontext}}"}'
