@@ -8,6 +8,12 @@ spec:
       sequences:
       - name: "mysequence"
         tasks: 
+        - name: "mytask-silent"
         - name: "evaluation"
           properties:
             timeframe: "5m"
+      - name: "loadtesting"
+        tasks: 
+        - name: "disable-rate-limiting"
+        - name: "execute-load-testing"
+        - name: "enable-rate-limiting"
