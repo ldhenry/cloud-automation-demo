@@ -36,3 +36,10 @@ spec:
             name: cliff-ld-local
             key: auth-token
       subscriptionID: 6850dc25-91dd-4963-b87f-7e7364062698
+    - type: sh.keptn.event.execute-load-testing.triggered
+      requests:
+        - curl --request POST --data
+          '{"event":"{{.type}}","stage":"{{.data.stage}}","contextId":"{{.
+          shkeptncontext}}"}'
+          https://ld-ctawiah-2.ngrok.io/webhook/triggers/620f3a008b41fc1fe075a1f7/955f400b-863e-4420-b113-3be7ecf1723e
+      subscriptionID: 0acb5b6d-8491-4570-9d4b-903c256b219a
