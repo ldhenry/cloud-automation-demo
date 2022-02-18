@@ -51,6 +51,7 @@ spec:
             key: auth-token
       subscriptionID: 973f1716-0c41-4ba3-9d4f-aebe3a6902a8
     - type: sh.keptn.event.execute-load-testing.triggered
+      sendFinished: true
       requests:
         - "curl --header 'Authorization: {{.env.secret_cliffldlocal_authtoken}}'
           --request POST --data
