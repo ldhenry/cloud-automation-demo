@@ -14,6 +14,4 @@ spec:
             timeframe: "5m"
       - name: "loadtesting"
         tasks: 
-        - name: "disable-rate-limiting"
         - name: "execute-load-testing"
-        - name: "enable-rate-limiting"
