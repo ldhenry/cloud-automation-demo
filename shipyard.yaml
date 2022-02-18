@@ -8,7 +8,6 @@ spec:
       sequences:
       - name: "mysequence"
         tasks: 
-        - name: "mytask-silent"
         - name: "evaluation"
           properties:
             timeframe: "5m"
