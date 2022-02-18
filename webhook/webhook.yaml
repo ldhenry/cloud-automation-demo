@@ -16,7 +16,7 @@ spec:
         - "curl --header 'Content-Type: application/json' --request POST --data
           '{\"event\":\"{{.type}}\",\"stage\":\"{{.data.stage}}\",\"result\":\"\
           {{.data.result}} ({{.data.evaluation.score}} / 100)\"}'
-          https://ld-ctawiah-2.ngrok.io/webhook/triggers/620d8f4c8b41fc6b62193c\
+          https://sguduru-gonfalon.ngrok.io/webhook/triggers/620d8f4c8b41fc6b62193c\
           e4/5391ce00-ddb9-4db1-8322-7d4e12cd06b8"
       subscriptionID: 0059aa9c-4100-4f88-b186-2a1b3b90331e
     - type: sh.keptn.event.evaluation.finished
@@ -29,7 +29,7 @@ spec:
           .data.evaluation.indicatorResults 1).score}}{{ if ge $score
           1.0}}true{{ else }}false{{ end }}    }  ],  \"comment\":
           \"{{.data.message}}\"}'
-          https://ld-ctawiah-2.ngrok.io/api/v2/flags/default/ctawiah-test"
+          https://sguduru-gonfalon.ngrok.io/api/v2/flags/default/ctawiah-test"
       envFrom:
         - name: secret_cliffldlocal_authtoken
           secretRef:
@@ -44,7 +44,7 @@ spec:
           Id\":\"{{.shkeptncontext}}\",\"url\":\"https://cyi56650.cloudautomati\
           on.live.dynatrace.com/bridge/project/{{.data.project}}/sequence/{{.sh\
           keptncontext}}/stage/{{.data.stage}}\"}'
-          https://ld-ctawiah-2.ngrok.io/webhook/triggers/620f3a008b41fc1fe075a1\
+          https://sguduru-gonfalon.ngrok.io/webhook/triggers/620f3a008b41fc1fe075a1\
           f7/955f400b-863e-4420-b113-3be7ecf1723e"
       subscriptionID: 0acb5b6d-8491-4570-9d4b-903c256b219a
     - type: sh.keptn.event.execute-load-testing.finished
@@ -54,6 +54,6 @@ spec:
           Id\":\"{{.shkeptncontext}}\",\"url\":\"https://cyi56650.cloudautomati\
           on.live.dynatrace.com/bridge/project/{{.data.project}}/sequence/{{.sh\
           keptncontext}}/stage/{{.data.stage}}\"}'
-          https://ld-ctawiah-2.ngrok.io/webhook/triggers/620f3a5d8b41fc1fe075a1\
+          https://sguduru-gonfalon.ngrok.io/webhook/triggers/620f3a5d8b41fc1fe075a1\
           fd/8f0ceed1-31bc-4483-87b2-f962f861c99e"
       subscriptionID: 19900df1-3d75-4e5b-a3db-24450e645691
