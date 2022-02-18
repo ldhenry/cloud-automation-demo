@@ -50,18 +50,3 @@ spec:
             name: cliff-ld-local
             key: auth-token
       subscriptionID: 973f1716-0c41-4ba3-9d4f-aebe3a6902a8
-    - type: sh.keptn.event.execute-load-testing.triggered
-      sendFinished: true
-      requests:
-        - "curl --header 'Authorization: {{.env.secret_cliffldlocal_authtoken}}'
-          --request POST --data
-          '{\"payload\":\"{{.data}}\",\"message\":\"Disabling rate limiting from
-          Dynatrace Cloud Automation to run load testing\"}'
-          https://ld-ctawiah-2.ngrok.io/webhook/triggers/620f3a008b41fc1fe075a1\
-          f7/955f400b-863e-4420-b113-3be7ecf1723e"
-      envFrom:
-        - name: secret_cliffldlocal_authtoken
-          secretRef:
-            name: cliff-ld-local
-            key: auth-token
-      subscriptionID: 27f750bb-dfc6-4558-bc04-3b1a0ee9a3ad
