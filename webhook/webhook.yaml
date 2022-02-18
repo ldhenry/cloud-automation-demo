@@ -45,6 +45,7 @@ spec:
           fd/8f0ceed1-31bc-4483-87b2-f962f861c99e"
       subscriptionID: 19900df1-3d75-4e5b-a3db-24450e645691
     - type: sh.keptn.event.execute-load-testing.triggered
+      sendFinished: true
       requests:
         - "curl --header 'Content-Type: application/json' --request POST --data
           '{\"eventName\":\"{{.type}}\",\"stage\":\"{{.data.stage}}\",\"context\
