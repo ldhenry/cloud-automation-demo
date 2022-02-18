@@ -36,20 +36,6 @@ spec:
             name: cliff-ld-local
             key: auth-token
       subscriptionID: 6850dc25-91dd-4963-b87f-7e7364062698
-    - type: sh.keptn.event.enable-rate-limiting.finished
-      requests:
-        - "curl --header 'Authorization: {{.env.secret_cliffldlocal_authtoken}}'
-          --request POST --data
-          '{\"payload\":\"{{.data}}\",\"message\":\"Enabling rate limiting from
-          Dynatrace Cloud Automation\"}'
-          http://localhost/webhook/triggers/620f3a5d8b41fc1fe075a1fd/8f0ceed1-3\
-          1bc-4483-87b2-f962f861c99e"
-      envFrom:
-        - name: secret_cliffldlocal_authtoken
-          secretRef:
-            name: cliff-ld-local
-            key: auth-token
-      subscriptionID: 973f1716-0c41-4ba3-9d4f-aebe3a6902a8
     - type: sh.keptn.event.disable-rate-limiting.finished
       requests:
         - "curl --header 'Authorization: {{.env.secret_cliffldlocal_authtoken}}'
