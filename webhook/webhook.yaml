@@ -52,7 +52,7 @@ spec:
     - type: sh.keptn.event.evaluation.finished
       requests:
         - "curl --header 'Content-Type: application/json' --header
-          'Authorization: {{.env.secret_sunnyldlocal_authtoken}}' --request POST
+          'Authorization: {{.env.secret_sunnyldlocal_authtoken}}' --request PATCH
           --data '{  \"patch\": [    {      \"op\": \"replace\",      \"path\":
           \"/environments/enable-some-new-feature/on\",      \"value\": {{$score
           := (index .data.evaluation.indicatorResults 1).score}}{{ if ge $score
