@@ -44,7 +44,7 @@ spec:
           Id\":\"{{.shkeptncontext}}\",\"url\":\"https://cyi56650.cloudautomati\
           on.live.dynatrace.com/bridge/project/{{.data.project}}/sequence/{{.sh\
           keptncontext}}/stage/{{.data.stage}}\"}'
-          https://sguduru-gonfalon.ngrok.io/webhook/triggers/6210295116f18d6985d3d3b3/c18268f4-c218-4827-9577-d345823adf0c"
+          https://sguduru-gonfalon.ngrok.io/webhook/triggers/6215223e16f18d895f9efedc/af740d71-9876-43bc-bdf2-2b49685ddc7a"
       subscriptionID: 0acb5b6d-8491-4570-9d4b-903c256b219a
     - type: sh.keptn.event.execute-load-testing.finished
       requests:
@@ -53,5 +53,5 @@ spec:
           Id\":\"{{.shkeptncontext}}\",\"url\":\"https://cyi56650.cloudautomati\
           on.live.dynatrace.com/bridge/project/{{.data.project}}/sequence/{{.sh\
           keptncontext}}/stage/{{.data.stage}}\"}'
-          https://sguduru-gonfalon.ngrok.io/webhook/triggers/6210296a16f18d6985d3d3b9/7d179bcc-0981-48fe-90e8-7cbe1e54d188"
+          https://sguduru-gonfalon.ngrok.io/webhook/triggers/6215220f16f18d895f9efed6/bea27d2c-deb4-4b06-8202-fb5de461c2fd"
       subscriptionID: 19900df1-3d75-4e5b-a3db-24450e645691
