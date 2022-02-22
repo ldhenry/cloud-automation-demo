@@ -49,22 +49,3 @@ spec:
           https://sguduru-gonfalon.ngrok.io/webhook/triggers/6215220f16f18d895f\
           9efed6/bea27d2c-deb4-4b06-8202-fb5de461c2fd"
       subscriptionID: 19900df1-3d75-4e5b-a3db-24450e645691
-    - type: sh.keptn.event.evaluation.finished
-      requests:
-        - "curl --header 'Content-Type: application/json' --header
-          'Authorization:
-          {{.env.secret_sunnyldlocal_authtoken}}{{.env.secret_sunnyldlocal_auth\
-          token}}' --request POST --data '{  \"patch\": [    {      \"op\":
-          \"replace\",      \"path\":
-          \"/environments/enable-some-new-feature/on\",      \"value\": {{$score
-          := (index .data.evaluation.indicatorResults 1).score}}{{ if ge $score
-          1.0}}true{{ else }}false{{ end }}    }  ],  \"comment\":
-          \"{{.data.message}}\"}'
-          https://sguduru-gonfalon.ngrok.io/api/v2/flags/always-snippet/enable-\
-          some-new-feature"
-      envFrom:
-        - name: secret_sunnyldlocal_authtoken
-          secretRef:
-            name: sunny-ld-local
-            key: auth-token
-      subscriptionID: 0059aa9c-4100-4f88-b186-2a1b3b90331e
