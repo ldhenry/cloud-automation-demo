@@ -60,3 +60,13 @@ spec:
             name: sunny-ld-local
             key: auth-token
       subscriptionID: 0059aa9c-4100-4f88-b186-2a1b3b90331e
+    - type: sh.keptn.event.evaluation.finished
+      requests:
+        - "curl --header 'Content-Type: application/json' --header ': '
+          --request POST --data
+          '{\"event\":\"{{.type}}\",\"stage\":\"{{.data.stage}}\",\"result\":\"\
+          {{.data.result}} ({{.data.evaluation.score}} / 100)\"}'
+          https://sguduru-gonfalon.ngrok.io/webhook/triggers/624b69fd9c01594766\
+          452bf5/1a430d8a-1849-47c4-9bc2-cab5a512042d"
+      subscriptionID: a331e349-fd35-41e3-9765-ed57af74bf50
+      sendFinished: false
