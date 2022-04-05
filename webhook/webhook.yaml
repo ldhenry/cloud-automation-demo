@@ -4,23 +4,6 @@ metadata:
   name: webhook-configuration
 spec:
   webhooks:
-    - type: sh.keptn.event.evaluation.finished
-      requests:
-        - "curl --header 'Content-Type: application/json' --header
-          'Authorization: {{.env.secret_cliffldlocal_authtoken}}' --request
-          PATCH --data '{  \"patch\": [    {      \"op\":
-          \"replace\",      \"path\":
-          \"/environments/ctawiah-test/on\",      \"value\": {{$score := (index
-          .data.evaluation.indicatorResults 1).score}}{{ if ge $score
-          1.0}}true{{ else }}false{{ end }}    }  ],  \"comment\":
-          \"{{.data.message}}\"}'
-          https://sguduru-gonfalon.ngrok.io/api/v2/flags/default/ctawiah-test"
-      envFrom:
-        - name: secret_cliffldlocal_authtoken
-          secretRef:
-            name: cliff-ld-local
-            key: auth-token
-      subscriptionID: 6850dc25-91dd-4963-b87f-7e7364062698
     - type: sh.keptn.event.execute-load-testing.triggered
       sendFinished: true
       requests:
