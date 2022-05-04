@@ -43,3 +43,14 @@ spec:
             name: sunny-ld-local
             key: auth-token
       subscriptionID: 0059aa9c-4100-4f88-b186-2a1b3b90331e
+    - type: sh.keptn.event.execute-load-testing.triggered
+      requests:
+        - "curl --header 'Content-Type: application/json' --request POST --data
+          '{\"eventName\":\"{{.type}}\",\"value\":\"{{.data.status}}\",\"url\":\
+          \"https://cyi56650.cloudautomation.live.dynatrace.com//bridge/project\
+          /{{.data.project}}/sequence/{{.shkeptncontext}}/stage/{{.data.stage}}\
+          \"}'
+          https://ld-stg.launchdarkly.com/webhook/triggers/6272b7a7b067d515673c\
+          1cb4/ddfb6a29-cc62-4fac-ad7f-cb6f8de72908"
+      subscriptionID: 6db1f5c1-2c58-42a6-bf4f-6ab8bf9642df
+      sendFinished: true
